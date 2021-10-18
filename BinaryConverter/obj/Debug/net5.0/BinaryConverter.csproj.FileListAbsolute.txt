@@ -1,0 +1,16 @@
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\BinaryConverter.exe
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\BinaryConverter.deps.json
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\BinaryConverter.runtimeconfig.json
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\BinaryConverter.runtimeconfig.dev.json
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\BinaryConverter.dll
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\ref\BinaryConverter.dll
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\bin\Debug\net5.0\BinaryConverter.pdb
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.csproj.AssemblyReference.cache
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.GeneratedMSBuildEditorConfig.editorconfig
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.AssemblyInfoInputs.cache
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.AssemblyInfo.cs
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.csproj.CoreCompileInputs.cache
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.dll
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\ref\BinaryConverter.dll
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.pdb
+E:\Pliki\Mateusz\Projekty\BinaryConverter\BinaryConverter\obj\Debug\net5.0\BinaryConverter.genruntimeconfig.cache
