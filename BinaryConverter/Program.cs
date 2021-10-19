@@ -4,11 +4,6 @@ namespace BinaryConverter
 {
     class Program
     {
-        static int number;
-        static int bin;
-        static int place;
-        static int max;
-        static bool ifNumber;
 
         static void Main()
         {
@@ -19,16 +14,16 @@ namespace BinaryConverter
             Console.WriteLine("3. Creator ");
             Console.WriteLine("4. Exit");
 
-            int.TryParse(Console.ReadLine(), out int select);
+            int select = int.Parse(Console.ReadLine());
             switch (select)
             {
                 case 1:
                     Console.Clear();
-                    Program.EnterDecimalNumber();
+                    EnterDecimalNumber();
                     break;
                 case 2:
                     Console.Clear();
-                    Program.EnterBinaryNumber();
+                    EnterBinaryNumber();
                     break;
                 case 3:
                     Console.Clear();
@@ -36,7 +31,7 @@ namespace BinaryConverter
                     Console.WriteLine("Press any button to continue");
                     Console.ReadKey();
                     Console.Clear();
-                    Program.Main();
+                    Main();
                     break;
                 case 4:
                     Environment.Exit(0);
@@ -45,15 +40,16 @@ namespace BinaryConverter
                     Console.Clear();
                     Console.WriteLine("Please enter a valid choice");
                     Console.WriteLine();
-                    Program.Main();
+                    Main();
                     break;
             }
         }
+
         static void EnterDecimalNumber()
         {
             Console.WriteLine("Give a number");
-            ifNumber = int.TryParse(Console.ReadLine(), out number);
-            if (ifNumber)
+            bool isNumber = int.TryParse(Console.ReadLine(), out int number);
+            if (isNumber)
             {
                 int[] result = ConvertToBinary(number);
                 for (int i = 0; i < result.Length; i++)
@@ -62,19 +58,18 @@ namespace BinaryConverter
                 }
                 Console.WriteLine();
                 Console.WriteLine("Press the '1' key to convert to another number, or any button to continue");
-                int.TryParse(Console.ReadLine(), out int select);
+                int select = int.Parse(Console.ReadLine());
+                Console.Clear();
                 if (select == 1)
                 {
-                    Console.Clear();
-                    Program.EnterDecimalNumber();
+                    EnterDecimalNumber();
                 }
                 else
                 {
-                    Console.Clear();
-                    Program.Main();
+                    Main();
                 }
                 Console.Clear();
-                Program.Main();
+                Main();
             }
             else
             {
@@ -82,51 +77,52 @@ namespace BinaryConverter
                 Console.WriteLine("Press any button to continue ");
                 Console.ReadLine();
                 Console.Clear();
-                Program.EnterDecimalNumber();
+                EnterDecimalNumber();
             }
 
         }
+
         static void EnterBinaryNumber()
         {
             Console.WriteLine("Please enter some binary number");
             string binary = Console.ReadLine();
-            bool ifNumberB = int.TryParse(binary, out int numberBin);
-            int i = binary.Length;
-            char[] numb = new char[i];
+            bool isNumberB = int.TryParse(binary, out int numberBin);
+            int lenght = binary.Length;
+            char[] numb = new char[lenght];
             int place = 0;
-            bool ifBinary = false;
+            bool isBinary = false;
 
-            for (int a = 0; a < i; a++)
+            for (int a = 0; a < lenght; a++)
             {
                 numb[place] = binary[place];
                 if (numb[place] - '0' == 1 || numb[place] - '0' == 0)
                 {
-                    ifBinary = true;
+                    isBinary = true;
                 }
                 else
                 {
-                    ifBinary = false;
+                    isBinary = false;
                 }
                 place++;
             }
 
-            if (ifNumberB)
+            if (isNumberB)
             {
-                if (ifBinary)
+                if (isBinary)
                 {
-                    Console.WriteLine(Program.ConvertToDecimal(binary));
+                    Console.WriteLine(ConvertToDecimal(binary));
                     Console.WriteLine();
                     Console.WriteLine("Press the '1' key to convert to another number, or any button to continue ");
-                    int.TryParse(Console.ReadLine(), out int select);
+                    int select = int.Parse(Console.ReadLine());
                     if (select == 1)
                     {
                         Console.Clear();
-                        Program.EnterBinaryNumber();
+                        EnterBinaryNumber();
                     }
                     else
                     {
                         Console.Clear();
-                        Program.Main();
+                        Main();
                     }
 
                 }
@@ -136,7 +132,7 @@ namespace BinaryConverter
                     Console.WriteLine("Press any button to continue ");
                     Console.ReadLine();
                     Console.Clear();
-                    Program.EnterBinaryNumber();
+                    EnterBinaryNumber();
                 }
             }
             else
@@ -145,31 +141,34 @@ namespace BinaryConverter
                 Console.WriteLine("Press any button to continue ");
                 Console.ReadLine();
                 Console.Clear();
-                Program.EnterBinaryNumber();
+                EnterBinaryNumber();
             }
         }
+
         static int[] ConvertToBinary(int number)
         {
-            max = 0;
-            int numberM = number;
-            while (numberM > 0)
+            int bin;
+            int max = 0;
+            int numberMax = number;
+            while (numberMax > 0)
             {
-                numberM = numberM / 2;
+                numberMax /= 2;
                 max++;
             }
-            place = max;
+            int place = max;
             int[] numberBin = new int[max];
             place--;
             while (number > 0)
             {
                 bin = number % 2;
-                number = number / 2;
+                number /= 2;
                 numberBin[place] = bin;
                 place--;
             }
 
             return numberBin;
         }
+
         static int ConvertToDecimal(string binary)
         {
             int endResult = 0;
@@ -185,7 +184,6 @@ namespace BinaryConverter
             }
 
             return endResult;
-
         }
     }
 }
